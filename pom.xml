@@ -17,6 +17,7 @@
 		<app.runtime>4.3.0</app.runtime>		
 		<maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		
 	</properties>
 
 	<build>
@@ -66,9 +67,9 @@
 						<username>${username}</username>
 						<password>${password}</password>
 						<applicationName>${project.artifactId}</applicationName>
-						<environment>${environment}</environment>
+						<environment>sandbox</environment>
 						<workerType>${workerType}</workerType>
-						<workers> ${noOf.worker} </workers>
+						<workers>1</workers>
 						<region> ${region} </region>
 					</cloudHubDeployment>
 				</configuration>

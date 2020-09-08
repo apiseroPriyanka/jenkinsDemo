@@ -18,13 +18,17 @@ pipeline {
       environment {
         ANYPOINT_CREDENTIALS = credentials('anypointPlatform')
       }
+            
       steps {
-        sh 'mvn deploy -P cloudhub -Dmule.version=4.3.0
-		-Danypoint.username=${ANYPOINT_CREDENTIALS_USR} 
-		-Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}
-		-DworkerType=Micro 
-		-Dworkers=1 
-		-Dregion=us-west-2' 
+        echo 'Deploying only because of code commit...'
+        echo " deploying to  dev environent"
+        bat 'mvn package deploy 
+        -DmuleDeploy 
+        -Dusername=${ANYPOINT_CREDENTIALS_USR} 
+        -Dpassword=${ANYPOINT_CREDENTIALS_PSW} 
+        -DworkerType=Micro 
+        -Dworkers=1 
+        -Dregion=us-west-2'
       }
     }
   }

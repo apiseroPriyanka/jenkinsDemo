@@ -70,7 +70,7 @@
 						<environment>SANDBOX</environment>
 						<workerType>${workerType}</workerType>
 						<workers>1</workers>
-						<region> ${region} </region>
+					<!-- 	<region> ${region} </region> -->
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>

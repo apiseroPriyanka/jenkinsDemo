@@ -67,7 +67,7 @@
 						<username>${username}</username>
 						<password>${password}</password>
 						<applicationName>${project.artifactId}</applicationName>
-						<environment>sandbox</environment>
+						<environment>SANDBOX</environment>
 						<workerType>${workerType}</workerType>
 						<workers>1</workers>
 						<region> ${region} </region>
